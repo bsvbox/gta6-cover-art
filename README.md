@@ -1,4 +1,10 @@
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/bsvbox/gta6-cover-art/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/bsvbox/gta6-cover-art/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+
 # Sunset Cover Studio
+
+Built for [make.fun's GTA 6 Cover Art bounty](https://make.fun/bounty/gta6-cover-art-01).
 
 A GTA 6-style poster maker that runs offline in a desktop browser. Load your
 own photos (up to three), crop and position each one, pick a multi-panel
