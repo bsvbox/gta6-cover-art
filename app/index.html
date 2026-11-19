@@ -3,20 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cover Snap</title>
+<title>Sunset Cover Studio — GTA 6-style poster maker</title>
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <main class="app">
-  <section class="controls">
-    <h1>Cover Snap</h1>
-    <p>A photo and a caption, made into a square cover.</p>
-    <label>Photo <input id="photo" type="file" accept="image/*"></label>
-    <label>Caption <input id="caption" type="text" maxlength="40" value="Sunset Heist"></label>
-    <button id="export" type="button">Export PNG 1080 x 1080</button>
-    <p id="status" role="status"></p>
+  <section class="controls" aria-label="Cover editor">
+    <h1>Sunset Cover Studio</h1>
+    <p class="tagline">Your photo + a caption, made into a GTA 6-style poster. Offline — photos never leave this machine.</p>
+
+    <fieldset>
+      <legend>1 · Photos</legend>
+      <div class="slot">
+        <label>Photo A <input id="fileA" type="file" accept="image/*"></label>
+        <button id="sampleA" type="button" class="mini">Use sample</button>
+        <span id="thumbA" class="thumb">Photo A empty</span>
+      </div>
+      <div class="slot">
+        <label>Photo B <input id="fileB" type="file" accept="image/*"></label>
+        <button id="sampleB" type="button" class="mini">Use sample</button>
+        <span id="thumbB" class="thumb">Photo B empty</span>
+      </div>
+      <div class="slot">
+        <label>Photo C <input id="fileC" type="file" accept="image/*"></label>
+        <button id="sampleC" type="button" class="mini">Use sample</button>
+        <span id="thumbC" class="thumb">Photo C empty</span>
+      </div>
+      <label class="check"><input id="fillOne" type="checkbox"> One photo in every panel</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>2 · Crop the photo</legend>
+      <label>Adjust
+        <select id="adjustPhoto">
+          <option value="0">Photo A</option>
+          <option value="1">Photo B</option>
+          <option value="2">Photo C</option>
+        </select>
+      </label>
+      <label>Zoom <input id="zoom" type="range" min="1" max="2.5" step="0.05" value="1"></label>
+      <label>Move left–right <input id="offx" type="range" min="-100" max="100" step="1" value="0"></label>
+      <label>Move up–down <input id="offy" type="range" min="-100" max="100" step="1" value="0"></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>3 · Layout &amp; grade</legend>
+      <div id="layouts" class="segs" role="group" aria-label="Layout"></div>
+      <div id="grades" class="segs" role="group" aria-label="Colour grade"></div>
+      <label class="check"><input id="showSun" type="checkbox" checked> Synthwave sun</label>
+      <label class="check"><input id="showPalms" type="checkbox" checked> Palm silhouettes</label>
+      <button id="shuffle" type="button" class="ghost">Shuffle the look</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>4 · Caption</legend>
+      <label>Title <input id="title" type="text" maxlength="28" value="Sunset Heist"></label>
+      <label>Subtitle <input id="subtitle" type="text" maxlength="32" value="Vice City Nights"></label>
+      <label>Title size <input id="titleSize" type="range" min="0.8" max="1.3" step="0.05" value="1"></label>
+      <div id="colors" class="swatches" role="group" aria-label="Title colour">
+        <button type="button" data-color="#ffffff" class="on" style="background:#ffffff" aria-label="White"></button>
+        <button type="button" data-color="#ffe95e" style="background:#ffe95e" aria-label="Yellow"></button>
+        <button type="button" data-color="#ff7ad9" style="background:#ff7ad9" aria-label="Pink"></button>
+        <button type="button" data-color="#7df9ff" style="background:#7df9ff" aria-label="Cyan"></button>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>5 · Export PNG</legend>
+      <div id="sizes" class="segs col" role="group" aria-label="Post size"></div>
+      <button id="export" type="button" class="primary">Export PNG</button>
+      <div class="quick">
+        <button type="button" data-export="square">1080×1080</button>
+        <button type="button" data-export="portrait">1080×1350</button>
+        <button type="button" data-export="wide">1920×1080</button>
+      </div>
+      <p id="status" role="status">Load a photo to start.</p>
+    </fieldset>
+    <p class="fine">Original art and lettering made for this app. Anton font under the SIL Open Font License (see app/fonts/OFL.txt). No Rockstar logo, artwork or font.</p>
   </section>
-  <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+  <section class="preview">
+    <canvas id="cover" width="1080" height="1080" aria-label="The cover preview"></canvas>
+  </section>
 </main>
 <script type="module" src="./src/main.js"></script>
 </body>

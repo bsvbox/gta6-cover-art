@@ -1,5 +1,26 @@
 [
-  { "name": "1-cover.jpg", "query": "?shot=cover&photo=pier&caption=Sunset%20Heist", "w": 1080, "h": 1080 },
-  { "name": "2-editor.jpg", "query": "?shot=editor&photo=boulevard&caption=Boulevard%20Queen", "w": 1280, "h": 720 },
-  { "name": "3-cover.jpg", "query": "?shot=cover&photo=boulevard&caption=Boulevard%20Queen", "w": 1080, "h": 1080 }
+ {
+  "h": 720,
+  "name": "1-cover.jpg",
+  "query": "?shot=cover&photo=boulevard&photoB=pier&caption=Neon%20Nights&subtitle=Vice%20City&layout=poster&grade=neon&size=wide",
+  "w": 1280
+ },
+ {
+  "h": 800,
+  "name": "2-editor.jpg",
+  "query": "?shot=editor&photo=boulevard&caption=Boulevard%20Queen&subtitle=Vice%20City%20Nights&layout=trio&grade=sunset&size=square",
+  "w": 1280
+ },
+ {
+  "h": 1280,
+  "name": "3-cover.jpg",
+  "query": "?shot=cover&photo=boulevard&caption=Boulevard%20Queen&subtitle=Vice%20City%20Nights&layout=grid&grade=sunset&size=portrait",
+  "w": 1024
+ },
+ {
+  "h": 1080,
+  "name": "4-cover.jpg",
+  "query": "?shot=cover&photo=boulevard&photoB=pier&caption=Sunset%20Heist&subtitle=Vice%20City&layout=trio&grade=dusk&size=square",
+  "w": 1080
+ }
 ]
